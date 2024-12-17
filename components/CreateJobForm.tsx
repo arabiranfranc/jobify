@@ -10,26 +10,18 @@ import {
   CreateAndEditJobType,
 } from "@/utils/types";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Form } from "@/components/ui/form";
 import { CustomFormField, CustomFormSelect } from "./FormComponents";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createJobAction } from "@/utils/action";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-});
+// const formSchema = z.object({
+//   username: z.string().min(2, {
+//     message: "Username must be at least 2 characters.",
+//   }),
+// });
 
 function CreateJobForm() {
   const queryClient = useQueryClient();
