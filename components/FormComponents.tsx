@@ -16,7 +16,7 @@ import {
 import { Input } from "./ui/input";
 
 type CustomFormFieldProps<T extends FieldValues> = {
-  name: Path<T>; // Ensure `name` is a valid key of `T`
+  name: Path<T>;
   control: Control<T>;
 };
 
