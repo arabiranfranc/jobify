@@ -12,7 +12,6 @@ export default async function authenticateAndRedirect(): Promise<string> {
   if (!userId) {
     redirect("/");
   }
-  console.log(userId);
 
   return userId;
 }
